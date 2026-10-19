@@ -1,0 +1,29 @@
+# The controllers in this repository, each built and deployed by the iocean
+# platform from here (Controllers, Deploy one, From GitHub). One entry each:
+#   slug      what the platform calls it (lower case, digits, dashes)
+#   name      what people see
+#   entry     the file and the Controller class in it, file.py:Class
+#   needs     what it needs of a machine: gpu, gpu_memory ("8G"), cpu, memory
+#   rate      how often it is asked for a command, per second (20)
+# A folder under controllers/ holding a controller.py and not listed here is
+# built too, named after its folder.
+
+[[controller]]
+slug = "station-hold"
+name = "Station hold"
+entry = "controllers/station-hold/controller.py:StationHold"
+
+[[controller]]
+slug = "go-around-things"
+name = "Go around things"
+entry = "controllers/go-around-things/controller.py:GoAroundThings"
+
+[[controller]]
+slug = "learned-hold"
+name = "Learned hold"
+entry = "controllers/learned-hold/controller.py:LinearHold"
+
+[[controller]]
+slug = "sawtooth"
+name = "Sawtooth (glider)"
+entry = "controllers/sawtooth/controller.py:Sawtooth"
